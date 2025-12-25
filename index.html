@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- For charts -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌍 Advanced Currency Converter</h1>
+            <button id="theme-toggle">🌙 Dark Mode</button>
+        </header>
+
+        <div class="converter">
+            <div class="input-group">
+                <input type="number" id="amount" value="1" min="0">
+                <select id="from-currency"></select>
+            </div>
+
+            <button id="swap" title="Swap currencies">↔️</button>
+
+            <div class="input-group">
+                <input type="text" id="result" readonly placeholder="Converted amount">
+                <select id="to-currency"></select>
+            </div>
+        </div>
+
+        <button id="convert">Convert Now</button>
+        <p id="rate-info"></p>
+
+        <div class="chart-container">
+            <h2>7-Day Rate Trend</h2>
+            <canvas id="rateChart"></canvas>
+        </div>
+
+        <footer>
+            <p>Rates powered by free open API • Updated daily</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
